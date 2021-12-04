@@ -9,3 +9,34 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model User {
+  id             Int       @id @default(autoincrement())
+  createdAt      DateTime  @default(now())
+  email          String    @unique
+  hashedPassword String
+  company        String?
+  developer      Boolean
+  role           String?
+  pfp            String?
+  resume         String?
+  likes          Like[]
+  requests       Request[]
+}
+
+model Request {
+  id             Int    @id @default(autoincrement())
+  title          String
+  requestContent String
+  User           User?  @relation(fields: [userId], references: [id])
+  userId         Int?
+  likes          Like[]
+}
+
+model Like {
+  id        Int      @id @default(autoincrement())
+  User      User?    @relation(fields: [userId], references: [id])
+  userId    Int?
+  Request   Request? @relation(fields: [requestId], references: [id])
+  requestId Int?
+}
