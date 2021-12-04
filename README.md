@@ -11,10 +11,9 @@ MetaHub aims to be an open source community for Web3 allowing developers and the
 ### Database
 [`PostgresQL`](https://www.postgresql.org/)
 
-### ORM
-[`Prisma`](https://www.prisma.io/docs/)
-
 ### Backend
+
+[`Prisma`](https://www.prisma.io/docs/)
 [`ExpressJS`](https://expressjs.com/)
 
 ### Frontend
