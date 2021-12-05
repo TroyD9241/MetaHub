@@ -19,9 +19,6 @@
       "@babel/preset-env"
     ]
   },
-  "jest": {
-    "testEnvironment": "node"
-  },
   "scripts": {
     "start": "npm run prod",
     "build": "npm-run-all clean transpile",
@@ -30,8 +27,7 @@
     "prod": "NODE_ENV=production npm-run-all build server",
     "transpile": "babel ./server --out-dir dist-server",
     "clean": "rimraf dist-server",
-    "watch:dev": "nodemon",
-    "test": "jest"
+    "watch:dev": "nodemon"
   },
   "dependencies": {
     "@babel/cli": "^7.16.0",
@@ -46,7 +42,6 @@
     "rimraf": "^3.0.2"
   },
   "devDependencies": {
-    "jest": "^27.4.3",
     "prisma": "^3.6.0"
   }
 }
