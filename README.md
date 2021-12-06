@@ -18,6 +18,7 @@ MetaHub aims to be an open source community for Web3 allowing developers and the
 
 ### Frontend
 [`React`](https://reactjs.org/docs/getting-started.html)
+[`Tailwind`](https://tailwindcss.com/)
 
 ### Tentative
 [`Docker`](https://docs.docker.com/)
