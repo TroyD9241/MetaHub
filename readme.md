@@ -26,14 +26,14 @@
 ## Technologies Implemented
 
 ### ***Server***
-[`Express`]()
-[`Prisma`]()
-[`Postgres`]()
-[`Solidity`]()
+[`Express`](https://expressjs.com/)
+[`Prisma`](https://www.prisma.io/)
+[`Postgres`](https://www.postgresql.org/)
+[`Solidity`](https://docs.soliditylang.org/en/v0.8.10/)
 
 ### ***Client***
-[`React`]()
-[`Tailwind`]()
+[`React`](https://reactjs.org/)
+[`Tailwind`](https://tailwindcss.com/)
 
 ---
 
