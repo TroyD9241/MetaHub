@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
+  "proxy": "http://localhost:5000",
+  "engines": {
+    "node": "16.10.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "nodemon --experimental-specifier-resolution=node ./index.js"
+    "start": "node .",
+    "build": "babel --delete-dir-on-start --out-dir dist --copy-files --ignore \"**/__tests__/**,**/__mocks__/**\" --no-copy-ignored src"
   },
   "repository": {
     "type": "git",
@@ -26,6 +29,16 @@
     "typescript": "^4.5.2"
   },
   "dependencies": {
-    "@prisma/client": "^3.6.0"
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/register": "^7.16.0",
+    "@prisma/client": "^3.6.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "loglevel": "^1.8.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15"
   }
 }
