@@ -1,0 +1,31 @@
+{
+  "name": "metahub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon --experimental-specifier-resolution=node ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TroyD9241/MetaHub.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TroyD9241/MetaHub/issues"
+  },
+  "homepage": "https://github.com/TroyD9241/MetaHub#readme",
+  "devDependencies": {
+    "@types/node": "^16.11.11",
+    "prisma": "^3.6.0",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "@prisma/client": "^3.6.0"
+  }
+}
