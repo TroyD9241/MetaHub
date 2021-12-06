@@ -1,6 +1,5 @@
 
 import React from "react";
-import Request from "../Request/Request";
 function App() {
   const [data, setData] = React.useState(null);
 
@@ -16,7 +15,6 @@ function App() {
         <header className="App-header">
           <p class="text-red-600 text-xl">{!data ? "Loading..." : data}</p>
         </header>
-        <Request />
       </div>
     </>
   );
