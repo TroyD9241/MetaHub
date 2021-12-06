@@ -29,6 +29,7 @@
 [`Express`]()
 [`Prisma`]()
 [`Postgres`]()
+[`Solidity`]()
 
 ### ***Client***
 [`React`]()
