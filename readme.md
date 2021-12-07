@@ -23,7 +23,7 @@
 -------
 
 ## **Future Goals**
-
+**coming soon**
 ## Technologies Implemented
 
 ### ***Server***
