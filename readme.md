@@ -20,8 +20,9 @@
 
 > We plan to implement a coin that is earned by contributing to the community. You earn assets for being here and contributing.
 
-
 -------
+
+## **Future Goals**
 
 ## Technologies Implemented
 
