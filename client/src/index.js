@@ -1,3 +1,5 @@
+// Contains method to render the application into real dom.
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
