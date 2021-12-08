@@ -7,9 +7,12 @@ const prisma = new PrismaClient()
 
 function getUserRoutes() {
     const router = express.Router()
-    router.get('/:id', getUserById)
+    // '/' routes
     router.post('/', createUser)
+    // '/:id' routes
+    router.get('/:id', getUserById)
     router.patch('/:id', updateUser)
+    // router.delete('/:id')
     return router
 }
 
@@ -60,9 +63,23 @@ async function updateUser(req, res) {
             resume: resume
         },
     })
-
     res.json(updatedUser)
+}
+// needs work
+async function deleteAccount(req, res) {
+    const id = parseInt(req.params.id)
 
+    const deleted = await prisma.user.delete({
+        where: {
+            id: id
+        },
+
+
+        // need to examine this. Probably need to assign the "to be" deleted users related tables to a new account?
+        // "deleted" perhaps?
+    })
+
+    res.json(deleted.id)
 }
 
 
