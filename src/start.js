@@ -1,4 +1,5 @@
 //Import statements
+import bodyParser from 'body-parser'
 import express from 'express'
 import 'express-async-errors'
 import logger from 'loglevel'
@@ -9,6 +10,7 @@ function startServer({ port = process.env.PORT } = {}) {
     const app = express()
 
     // Mount the entire app to the /api route
+    app.use(bodyParser.json())
     app.use('/api', getRoutes())
 
     // add generic error handling
