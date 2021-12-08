@@ -5,7 +5,7 @@
 
 **The goal of MetaHub is to create an inclusive `Hub` for all members of the Web3 Community.**
 
->We truly believe in this space and want to help The [Metaverse](https://blogs.nvidia.com/blog/2021/08/10/what-is-the-metaverse/) live up to its potential. Creating a place that rewards both developers and non-developers for contributing towards making the Metaverse live up to its potential.
+>We truly believe in this space and want to help The [Metaverse](https://blogs.nvidia.com/blog/2021/08/10/what-is-the-metaverse/) live up to its potential. Creating a place that rewards both developers and non-developers for contributing towards making the Metaverse.
 
 ## What is MetaHub?
 
@@ -20,20 +20,21 @@
 
 > We plan to implement a coin that is earned by contributing to the community. You earn assets for being here and contributing.
 
-
 -------
 
+## **Future Goals**
+**coming soon**
 ## Technologies Implemented
 
 ### ***Server***
-[`Express`]()
-[`Prisma`]()
-[`Postgres`]()
-[`Solidity`]()
+[`Express`](https://expressjs.com/)
+[`Prisma`](https://www.prisma.io/)
+[`Postgres`](https://www.postgresql.org/)
+[`Solidity`](https://docs.soliditylang.org/en/v0.8.10/)
 
 ### ***Client***
-[`React`]()
-[`Tailwind`]()
+[`React`](https://reactjs.org/)
+[`Tailwind`](https://tailwindcss.com/)
 
 ---
 
