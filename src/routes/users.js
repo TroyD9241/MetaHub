@@ -12,7 +12,8 @@ function getUserRoutes() {
     // '/:id' routes
     router.get('/:id', getUserById)
     router.patch('/:id', updateUser)
-    // router.delete('/:id')
+    // '/:id/requests'
+    router.get('/:id/requests', getRequestsById)
     return router
 }
 
@@ -82,5 +83,18 @@ async function deleteAccount(req, res) {
     res.json(deleted.id)
 }
 
+async function getRequestsById(req, res) {
+    const firstUserRequestsQuery = await prisma.user.findUnique({
+        where: {
+            id: parseInt(req.params.id)
+        },
+        include: {
+            requests: true
+        },
+
+    })
+    res.json(firstUserRequestsQuery)
+    // need to implement pagination.
+}
 
 export { getUserRoutes }
