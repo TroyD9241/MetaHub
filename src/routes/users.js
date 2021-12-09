@@ -15,7 +15,9 @@ function getUserRoutes() {
     // '/:id/requests'
     router.get('/:id/requests', getRequestsByUserId)
     // '/:id/likes'
-    return router.get('/:id/likes', getLikedRequestsById)
+    router.get('/:id/likes', getLikedRequestsById)
+    return router
+
 }
 
 // http://localhost:5000/api/users || Create a new user.
@@ -118,5 +120,7 @@ async function getLikedRequestsById(req, res) {
     })
     res.json(requests)
 }
+
+
 
 export { getUserRoutes }
