@@ -13,8 +13,9 @@ function getUserRoutes() {
     router.get('/:id', getUserById)
     router.patch('/:id', updateUser)
     // '/:id/requests'
-    router.get('/:id/requests', getRequestsById)
-    return router
+    router.get('/:id/requests', getRequestsByUserId)
+    // '/:id/likes'
+    return router.get('/:id/likes', getLikedRequestsById)
 }
 
 // http://localhost:5000/api/users || Create a new user.
@@ -41,6 +42,14 @@ async function getUserById(req, res) {
     const user = await prisma.user.findUnique({
         where: {
             id: id
+        },
+        include: {
+            _count: {
+                select: {
+                    requests: true,
+                    likes: true
+                },
+            },
         },
     })
 
@@ -83,18 +92,31 @@ async function deleteAccount(req, res) {
     res.json(deleted.id)
 }
 
-async function getRequestsById(req, res) {
+async function getRequestsByUserId(req, res) {
     const firstUserRequestsQuery = await prisma.user.findUnique({
         where: {
             id: parseInt(req.params.id)
         },
         include: {
-            requests: true
+            requests: true,
         },
-
     })
     res.json(firstUserRequestsQuery)
     // need to implement pagination.
+}
+
+async function getLikedRequestsById(req, res) {
+    const id = parseInt(req.params.id)
+
+    const requests = await prisma.user.findUnique({
+        where: {
+            id: id
+        },
+        include: {
+            likes: true
+        }
+    })
+    res.json(requests)
 }
 
 export { getUserRoutes }
