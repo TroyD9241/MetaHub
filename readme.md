@@ -23,7 +23,9 @@
 -------
 
 ## **Future Goals**
-**coming soon**
+- Minting our own coin that rewards members for participating. 
+
+** More coming soon**
 ## Technologies Implemented
 
 ### ***Server***
