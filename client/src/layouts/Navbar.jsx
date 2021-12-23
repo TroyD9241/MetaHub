@@ -1,20 +1,22 @@
 import { useState } from "react";
+import SignUpModal from "./SignupModal";
+import LoginModal from "./LoginModal";
 
+const user = {
+    userName: "demo",
+    pfp: "https://cdn131.picsart.com/349218956014201.jpg"
+}
 
 const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false)
-
-    const handleClick = () => {
-        setIsOpen(!isOpen)
-    }
+    const [userState, setUserState] = useState(user)
     return (
-        <div class="navbar mb-2 shadow-lg bg-neutral text-neutral-content rounded-box">
+        <div class="navbar mb-2 shadow-lg bg-neutral text-neutral-content rounded-none">
             <div class="flex-none hidden lg:flex">
                 <div class="dropdown dropdown-hover">
-                    <div tabindex="0" class="m-1 btn">open on hover</div>
+                    <div tabindex="0" class="m-1 btn"><i class="fas fa-caret-down"></i></div>
                     <ul tabindex="0" class="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52">
                         <li>
-                            <a>Item 1</a>
+
                         </li>
                         <li>
                             <a>Item 2</a>
@@ -27,7 +29,7 @@ const Navbar = () => {
             </div>
             <div class="flex-1 hidden px-2 mx-2 lg:flex">
                 <span class="text-lg font-bold">
-                    daisyUI
+                    MetaHub
                 </span>
             </div>
             <div class="flex-1 lg:flex-none">
@@ -49,14 +51,21 @@ const Navbar = () => {
                     </svg>
                 </button>
             </div>
-            <div class="flex-none">
-                <div class="avatar">
-                    <div class="rounded-full w-10 h-10 m-1">
-                        profile
+            {userState &&
+                <div class="flex-none">
+                    <div class="avatar">
+                        <div class="rounded-full w-12 h-12 m-1">
+                            <img src={userState.pfp}></img>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            }
+            {!userState &&
+                <LoginModal />
+            }
+            {!userState &&
+                <SignUpModal />}
+        </div >
     );
 };
 
