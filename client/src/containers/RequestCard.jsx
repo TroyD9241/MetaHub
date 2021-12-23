@@ -4,11 +4,12 @@ const user = {
 }
 
 const RequestCard = ({ request }) => {
-    if
     const { title, content, pictures } = request
     console.log(title, content)
     return (
-        <></>
+        <div>
+
+        </div>
     )
 }
 
